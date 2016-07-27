@@ -11,6 +11,9 @@
 
     <!-- Map takes up full browser window -->
     <style>
+      #map_container {
+        position: relative;
+      }
       html, body, #map {
         height: 100vh;
         padding: 0;
@@ -159,6 +162,7 @@
 
   </head>
   <body>
+    <div id="map_container"></div>
     <div id="map"></div>
     <div id="title">
       <h1>Tracking Air Pollution in the United States</h1>
