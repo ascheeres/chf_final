@@ -149,7 +149,7 @@
     }
     #epa_all_clean_final{
       image-filters: colorize-alpha(#F7F7F7, #BDBDBD, #636363);
-      marker-file: url(http://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);
+      marker-file: url(https://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);
       marker-fill-opacity: 0.4*[value];
       marker-width: 35;
     }
@@ -197,11 +197,10 @@
 
     <!-- include cartodb.js library -->
     <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet-src.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
     <script type="text/javascript" src="js/leaflet.easybutton.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
 
     <!-- Drop your code between the script tags below! -->
     <script>
@@ -221,8 +220,8 @@
       options: {
         user_name: 'chemheritage', // replace with your user name
         table_name: 'epa_all_clean_final',
-        cartocss: $("#cartocss").text(),
-        text: $("#sidebar").text()
+        tiler_protocol: "https",
+        cartocss: $("#cartocss").text()
       }
     };
 
@@ -263,7 +262,7 @@
 
             "#epa_all_clean_final{",
               "image-filters: colorize-alpha(#FEE5D9, #FCAE91, #FB6A4A, #DE2D26, #A50F15);",
-              "marker-file: url(http://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
+              "marker-file: url(https://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
               "marker-fill-opacity: 0.4*[value];",
               "marker-width: 35;",
             "}",
@@ -287,7 +286,7 @@
 
             "#epa_all_clean_final{",
               "image-filters: colorize-alpha(#EFF3FF, #BDD7E7, #6BAED6, #3182BD, #08519C);",
-              "marker-file: url(http://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
+              "marker-file: url(https://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
               "marker-fill-opacity: 0.4*[value];",
               "marker-width: 35;",
             "}",
@@ -311,7 +310,7 @@
 
             "#epa_all_clean_final{",
               "image-filters: colorize-alpha(#FCECDF, #7A5230, #614126, #49311C);",
-              "marker-file: url(http://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
+              "marker-file: url(https://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
               "marker-fill-opacity: 0.4*[value];",
               "marker-width: 35;",
             "}",
@@ -328,14 +327,14 @@
             "-torque-frame-count:300;",
             "-torque-animation-duration:100;",
             "-torque-time-attribute:'_1st_max_datetime';",
-            "-torque-aggregation-function:'avg(arithmetic_mean)';",
+            "-torque-aggregation-function:'avg(arithmetic_mean*10)';",
             "-torque-resolution:1;",
             "-torque-data-aggregation:linear;",
             "}",
 
             "#epa_all_clean_final{",
               "image-filters: colorize-alpha(##FEEDDE, #FDBE85, #FD8D3C, #E6550D, #A63603);",
-              "marker-file: url(http://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
+              "marker-file: url(https://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
               "marker-fill-opacity: 0.4*[value];",
               "marker-width: 35;",
             "}",
@@ -359,7 +358,7 @@
 
             "#epa_all_clean_final{",
               "image-filters: colorize-alpha(#F2F0F7, #CBC9E2, #9E9AC8, #756BB1, #54278F);",
-              "marker-file: url(http://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
+              "marker-file: url(https://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
               "marker-fill-opacity: 0.4*[value];",
               "marker-width: 35;",
             "}",
@@ -382,7 +381,7 @@
             "}",
             "#epa_all_clean_final{",
               "image-filters: colorize-alpha(#FCFAB8, #FCF402);",
-              "marker-file: url(http://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
+              "marker-file: url(https://s3.amazonaws.com/com.cartodb.assets.static/alphamarker.png);",
               "marker-fill-opacity: 0.4*[value];",
               "marker-width: 35;",
             "}",
