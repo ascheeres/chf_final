@@ -37,6 +37,7 @@
           background: #000000;
           font-weight: bold;
           padding: 0;
+          border-top: 4px solid #FFF;
           border-bottom: 4px solid #FFF;
       }
       .layer_selector p {
@@ -123,42 +124,35 @@
           margin: 1% 5% 0% 0%;
           background: #FCF402;
       }
-      #title {
-        position: fixed;
+      #container {
+        position: absolute;
         width: 100%;
         top: 0%;
         height: 12%;
         background: #000000;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 2.2vh;
         border-bottom: 4px solid #FFF;
-        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
       }
-      @media screen and (max-width: 1564px) {
-        #title {
-          font-size: 15px;
-        }
+      #logo {
+        padding-left: 2%;
       }
-      @media screen and (min-width: 1564px) {
-        #title br {
-          display: none;
-        }
+      #azavea {
+        padding-left: 2%;
+      }
+      #title {
+        color: #FFF;
+        font-size: 2.1vh;
+        text-align: center;
+        flex: 1;
+        padding-left: 2%;
       }
       img.globe {
         display: block;
-        margin-left: -20%;
-        margin-top: 0%;
-      }
-      #logo {
-        position: fixed;
-        top: 2%;
-        left: 1.6%;
-      }
-      #azavea {
-        position: fixed;
-        top: 1.5%;
-        right: -5%;
+        margin-left: -6px;
+        margin-top: -4px;
       }
       .sidebar {
         position: absolute;
@@ -264,8 +258,16 @@
   </head>
   <body>
     <div id="map"></div>
-    <div id="title">
-      <h1>MONTHLY AIR POLLUTION IN <br>THE UNITED STATES: 1990-2015</h1>
+    <div id="container">
+        <div id="logo">
+          <img src="css/images/chf.png" style="height:7vh;">
+        </div>
+        <div id ="azavea">
+          <img src="css/images/azavea.png" style="height:8vh;">
+        </div>
+        <div id="title">
+          <h1>MONTHLY AIR POLLUTION IN THE UNITED STATES: 1990-2015</h1>
+        </div>
     </div>
     <div class="container">
       <div class="layer_selector">
@@ -283,12 +285,6 @@
       <div class="sidebar">
         <p>The EPA monitors many air pollutants that are dangerous to both you and the environment. The data represented in the visualization represents concentration levels of all six official 'criteria pollutants.' The six featured pollutants are called 'criteria pollutants' because the Clean Air Act requires the EPA to set and monitor concentration standards for them. The EPA has air quality monitoring stations located throughout the United States that track concentration levels of these and other pollutants.</p>
       </div>
-    </div>
-    <div id="logo">
-      <img src="css/images/chf.png" style="width:10%;height:5%;">
-    </div>
-    <div id ="azavea">
-      <img src="css/images/azavea.png" style="width:40%;height:30%;">
     </div>
 
     <!-- include cartodb.js library -->
